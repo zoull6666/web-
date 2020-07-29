@@ -1,0 +1,69 @@
+@import url("~assets/less/currency.less");
+
+.down_load{
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(0,0,0,.5);
+    .code_box{
+        .centerWH(500px,492px);
+        background: url('/img/down_bg.png') no-repeat center;
+        // background-size: cover;
+
+    }
+    .text_box{
+        color: #ffffff;
+        text-align: center;
+        p{
+            margin-top:71px;
+            font-size: 34px;
+            letter-spacing: 3.4px;
+        }
+        div{
+            font-size: 10px;
+            margin-top: 18px;
+            letter-spacing: 7px;
+        }
+    }
+    .code{
+        position: relative;
+        margin: 48px auto 32px auto;
+        .wh(200px);
+        .qr_code{
+            position: absolute;
+            z-index: 10;
+            .wh(200px);
+            background:url('/img/2wm.png') no-repeat center;
+            background-size: 220px 220px;
+        }
+        .footer_pad{
+            position: absolute;
+            width: 220px;
+            height: 26px;
+            background-color: #2a274b;
+            bottom: -13px;
+            left: -10px;
+            border-radius: 50%;
+
+        }
+
+
+    }
+    .app_text{
+        margin-top: 32px;
+        font-size: 14px;
+        text-align: center;
+        color: #333;
+    }
+    .close{
+        cursor: pointer;
+        position: absolute;
+        .wh(16px);
+        right: 20px;
+        top: 20px;
+        background: url('/img/ic_close_white.png') no-repeat center;
+    }
+}

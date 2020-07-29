@@ -1,0 +1,311 @@
+.wh(@size) {
+    height: @size;
+    width: @size;
+}
+
+.h100() {
+    height: 100%;
+}
+
+.w100() {
+    width: 100%;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+//超出隐藏...
+.textHide(@line) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box; //作为弹性伸缩盒子模型显示。
+    -webkit-box-orient:vertical; //设置伸缩盒子的子元素排列方式--从上到下垂直排列
+    -webkit-line-clamp:@line; //显示的行
+}
+.lineHide(){
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+// 图片等比例显示
+
+.zoom_img(){
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+
+.centerWH(@w,@h) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: @w;
+    height: @h;
+    margin: auto;
+}
+
+//版心
+.banxin() {
+    width: 1200px;
+    padding-top: 60px;
+    margin: auto;
+}
+//边框设置 
+.border(@w: 1px, @c: #eee) {
+    border: @w solid @c;
+}
+
+//定位
+.pos(r) {
+    position: relative;
+}
+
+.pos(a) {
+    position: absolute;
+}
+
+.pos(f) {
+    position: fixed;
+}
+
+.fl() {
+    float: left;
+}
+
+.fr() {
+    float: right;
+}
+
+//垂直居中
+.pos-box-cc {
+    .pos(a);
+    .transform(translate(-50%, -50%));
+    top: 50%;
+    left: 50%;
+}
+
+.bc() {
+    margin: 0 auto;
+}
+
+//文字居中
+.tc() {
+    text-align: center;
+}
+
+//文字垂直居中
+.tcc(@h) {
+    text-align: center;
+    line-height: @h;
+}
+
+.l-h(@h) {
+    height: @h;
+    line-height: @h;
+}
+
+//display
+.d-b() {
+    display: block;
+}
+
+.d-b-i() {
+    display: block;
+    content: '';
+}
+
+.d-i() {
+    display: inline;
+}
+
+.d-ib() {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.d-t() {
+    display: table;
+}
+
+.d-n() {
+    display: none;
+}
+
+.t-n(@p: none) {
+    text-decoration: @p;
+}
+
+.tc() {
+    text-align: center;
+}
+
+.tl() {
+    text-align: left;
+}
+
+.tr() {
+    text-align: right;
+}
+
+//圆角
+.radius(@r) {
+    -webkit-border-radius: @r;
+    -moz-border-radius: @r;
+    border-radius: @r;
+}
+
+//过度
+.transition(@trans, @time) {
+    -webkit-transition: @trans @time;
+    -moz-transition: @trans @time;
+    -ms-transition: @trans @time;
+    -o-transition: @trans @time;
+    transition: @trans @time;
+}
+
+.transform-origin(@origin) {
+    -webkit-transition-origin: @origin;
+    -moz-transition-origin: @origin;
+    -ms-transition-origin: @origin;
+    -o-transition-origin: @origin;
+    transition-origin: @origin;
+}
+
+.transform(@transform) {
+    -webkit-transform: @transform;
+    -moz-transform: @transform;
+    -ms-transform: @transform;
+    -o-transform: @transform;
+    transform: @transform;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+/**
+* animation
+*/
+
+.keyframes (@prefix, @name, @content) when (@prefix=def) {
+    @keyframes @name {
+        @content();
+    }
+}
+
+.keyframes (@prefix, @name, @content) when (@prefix=moz) {
+    @-moz-keyframes @name {
+        @content();
+    }
+}
+
+.keyframes (@prefix, @name, @content) when (@prefix=o) {
+    @-o-keyframes @name {
+        @content();
+    }
+}
+
+.keyframes (@prefix, @name, @content) when (@prefix=webkit) {
+    @-webkit-keyframes @name {
+        @content();
+    }
+}
+
+.keyframes (@prefix, @name, @content) when (@prefix=all) {
+    .keyframes(moz, @name, @content);
+    .keyframes(o, @name, @content);
+    .keyframes(webkit, @name, @content);
+    .keyframes(def, @name, @content);
+}
+
+.create3d(@h) {
+    -webkit-perspective: @h;
+    perspective: @h;
+}
+
+.use3d() {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+//动画
+.animation(@as) {
+    -webkit-animation: @as;
+    -moz-animation: @as;
+    -o-animation: @as;
+    animation: @as;
+}
+
+.trans3d() {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.trans-origin(@to) {
+    -webkit-transform-origin: @to;
+    -moz-transform-origin: @to;
+    transform-origin: @to;
+}
+
+//文字超出隐藏
+.text-vertical(@text) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: @text;
+    overflow: hidden;
+}
+
+//颜色叠加
+.lightens(@url, @c1, @c1) {
+    background-image: url(@url), linear-gradient(@c1, @c1);
+    background-blend-mode: lighten;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.image-ioc(@url) {
+    background-image: url(@url);
+    background-size: cover;
+}
+
+//颜色渐变
+.radial-gradient(@color1, @color2) {
+    background: -webkit-radial-gradient(@color1, @color2);
+    background: -o-radial-gradient(@color1, @color2);
+    background: -moz-radial-gradient(@color1, @color2);
+    background: radial-gradient(@color1, @color2);
+}
+
+//菱形
+.polygon() {
+    -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    -moz-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+//旋转
+.rotate(@deg) {
+    transform: rotate(@deg);
+    -ms-transform: rotate(@deg);
+    -moz-transform: rotate(@deg);
+    -webkit-transform: rotate(@deg);
+    -o-transform: rotate(@deg);
+}
+
+// transparent

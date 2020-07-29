@@ -1,0 +1,100 @@
+@import url("~assets/less/index.less");
+
+.stock_card {
+    width: 388px;
+    height: 381px;
+    padding:40px 20px 39px 20px;
+    background-color: #fff;
+
+}
+.stock_sort {
+	width: 120px;
+    height: 36px;
+    border: solid 2px #eb4242;
+    color: #eb4242;
+    font-size: 18px;
+    .tcc(36px)
+}
+.stock_name {
+    height: 58px;
+    border-bottom: 1px solid #eb4242;
+    padding-top:20px;
+    .div{
+        float: left;
+
+    }
+    .red {
+    color: #eb4242;
+  }
+    .green {
+      color: #2abd6e;
+    }
+    &.stock_name .div:nth-of-type(1){
+        color:#333333;
+        .name{
+            font-size: 17px;
+            font-weight:bold;
+        }
+        .code {
+            font-size: 16px;
+
+        }
+    }
+    &.stock_name .div:nth-of-type(2),&.stock_name .div:nth-of-type(3){
+        //color:#eb4242;
+        padding-left: 24px;
+        font-size: 16px;
+        padding-top:4px;
+    }
+}
+.attribute{
+    padding-top:20px;
+    .title{
+        float: left;
+        font-size: 16px;
+        letter-spacing: 0px;
+        color: #333333;
+        font-weight: bold;
+    }
+    .content{
+        float: left;
+        padding-left: 8px;
+        font-size: 16px;
+        letter-spacing: 0px;
+        color: #333333;
+    }
+}
+.logic{
+    margin-top: 20px;
+    max-height: 120px;
+    overflow: hidden;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    //.textHide(4);
+    .title{
+
+        font-size: 16px;
+        letter-spacing: 0px;
+        color: #333333;
+        line-height: 20px;
+        font-weight: bold;
+    }
+    .content{
+        padding-left: 8px;
+        font-size: 16px;
+        position: relative;
+        line-height: 20px;
+        word-wrap: break-word;
+        word-break: break-all;
+        letter-spacing: 0px;
+        color: #333333;
+
+    }
+
+}
+.star_box{
+    padding-top:3px;
+}
