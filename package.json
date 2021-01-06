@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "cross-env": "^5.2.0",
     "dayjs": "^1.8.11",
     "less": "^3.9.0",
