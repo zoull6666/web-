@@ -4,7 +4,7 @@
             <p>{{bannerData.text}}888888</p>
             <span :class='{"bg":bannerData.bgcolor}'>{{bannerData.title}}</span>
         </div>
-      
+
         <slot name='label'></slot>
     </div>
 </template>
