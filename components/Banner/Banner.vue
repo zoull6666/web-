@@ -1,10 +1,9 @@
 <template>
     <div class="banner" :style="{'background-image':`url(${bannerData.img})`}">
         <div class="text_box">
-            <p>{{bannerData.text}}1111</p>
+            <p>{{bannerData.text}}1111333</p>
             <span :class='{"bg":bannerData.bgcolor}'>{{bannerData.title}}2222</span>
         </div>
-      
         <slot name='label'></slot>
     </div>
 </template>
