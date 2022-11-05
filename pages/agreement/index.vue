@@ -1,5 +1,6 @@
 <template>
 <div id="agreement">
+
     <div class="content">
       <h3>服务协议</h3>
       <h4>特别提示</h4>
