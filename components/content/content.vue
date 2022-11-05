@@ -6,7 +6,8 @@
       :class="{content : isOpen == true, contentAll : isOpen == false,maxHeight: isHeight == true}"
       style="-webkit-box-orient: vertical;"
     ></div>
-    <span v-show="isShow" @click="toChange()">{{isOpen ? '全文': '收起'}}</span>
+
+    <span v-show="isShow" @click="toChange()">{{isOpen ? '全文': '收起'}}sdfsdfsf</span>
   </div>
 
 </template>
