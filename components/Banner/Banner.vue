@@ -5,6 +5,7 @@
            <p>{{bannerData.text}}1111333</p>
             <span :class='{"bg":bannerData.bgcolor}'>{{bannerData.title}}2222</span>
         </div>
+      
         <slot name='label'></slot>
     </div>
 </template>
